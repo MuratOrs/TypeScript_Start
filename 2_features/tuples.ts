@@ -18,14 +18,14 @@ cola[1] = 'black';
 //Чтобы этого избежать, в TS есть специальная аннотация, позволяющая нам избежать таких ошибок.
 //В этом случае теперь TS сразу сообщит о допущенной ошибке 
 
-const colaTypeAnnotations: [string, boolean, number] = ['brown', true, 40];
+const colaTypeAnnotations1: [string, boolean, number] = ['brown', true, 40];
 
 //В этом случае теперь TS сразу сообщит о допущенной ошибке 
 
-const colaTypeAnnotations: [string, boolean, number] = ['brown', true, 40];
+//const colaTypeAnnotations: [string, boolean, number] = ['brown', true, 40];
 
 // TS выдает ошибку, что ожидает тип boolean
-colaTypeAnnotations[1] = 'black';
+//colaTypeAnnotations[1] = 'black';
 
 //Вместо кода выше можно использовать такой синтаксис
 
