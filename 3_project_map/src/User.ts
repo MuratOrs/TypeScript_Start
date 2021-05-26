@@ -1,22 +1,24 @@
-import faker from 'faker'
+import faker from 'faker';
+import { Mappable } from './CustomMap';
 
-//export default 'DefExpo' - you can export everything by default, 
-//but this practice is not encouraged in TS
-
-export class User {
+export class User implements Mappable {
   name: string;
   location: {
     lat: number;
     lng: number;
   };
+
+  color: string = 'black';
+
   constructor() {
-    this.name = faker.name.findName();
+    this.name = faker.name.firstName();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude())
     };
   }
+
+  markerContent(): string {
+    return `User Name: ${this.name}`;
+  }
 }
-
-
-
